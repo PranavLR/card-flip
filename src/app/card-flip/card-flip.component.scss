@@ -1,0 +1,121 @@
+.container {
+  padding: 0 max(1rem, 1.2vw);
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 160px);
+  grid-gap: 1rem;
+  place-content: center;
+}
+
+.score {
+  // margin-bottom: 18px;
+  text-align: center;
+
+  &.Perfect {
+    color: green;
+  }
+  &.Good {
+    color: yellow;
+  }
+  &.Nice {
+    color: orange;
+  }
+  &.Ok {
+    color: orangered;
+  }
+  &.Fail {
+    color: red;
+  }
+}
+
+.wrapper-btn {
+  padding-block: 1rem;
+  &:has(.score) {
+    padding: 17px;
+  }
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  margin-inline: auto;
+  // margin-bottom: 1rem;
+  display: flex;
+  background-color: #1a1a1a;
+  box-shadow: 0px 0px 7px -1px #c4c4c4;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.heart-beat {
+  animation: heartbeat 1s ease-in-out;
+  border-color: #646cff;
+}
+
+@keyframes heartbeat {
+  0%,
+  50%,
+  100% {
+    scale: 1;
+  }
+  25%,
+  75% {
+    scale: 1.2;
+  }
+}
+
+// .container {
+//   padding: max(1rem, 1.2vw) max(1rem, 1.2vw) 0;
+// }
+// .wrapper {
+//   display: grid;
+//   // grid-template-columns: repeat(4, clamp(min(16vw), 160px, max(90vw, 55rem)));
+//   grid-template-columns: repeat(4, max(10rem, 16vw));
+//   grid-gap: max(1rem, 1.2vw);
+//   place-content: center;
+//   // width: 80%;
+//   // margin: auto;
+// }
+
+// button {
+//   border-radius: max(0.5rem, 0.5vw);
+//   border: 1px solid transparent;
+//   padding: 0.6em 1.2em;
+//   font-size: clamp(1rem, 1.5vw, 3.8rem);
+//   font-weight: 500;
+//   font-family: inherit;
+//   cursor: pointer;
+//   transition: border-color 0.25s;
+//   margin-inline: auto;
+//   margin-bottom: max(2vh, 1rem);
+//   display: flex;
+//   background-color: #1a1a1a;
+//   box-shadow: 0px 0px 7px -1px #c4c4c4;
+
+//   white-space: nowrap;
+//   width: clamp(5vw, auto, 116px);
+// }
+
+// button:hover {
+//   border-color: #646cff;
+// }
+
+// button:focus,
+// button:focus-visible {
+//   outline: 4px auto -webkit-focus-ring-color;
+// }

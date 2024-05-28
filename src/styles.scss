@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #ffffffde;
+  background-color: #242424;
+}
+
+html {
+  scroll-behavior: smooth;
+  // color-scheme: dark;
+}
+
+img,
+video,
+svg,
+picture {
+  max-width: 100%;
+  display: block;
+  user-select: none;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  // background-color: #1e1e1e;
+  // color: #fff;
+}
+
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     color: #213547;
+//     background-color: #fff;
+//   }
+
+//   a:hover {
+//     color: #747bff;
+//   }
+
+//   button {
+//     background-color: #f9f9f9;
+//   }
+// }

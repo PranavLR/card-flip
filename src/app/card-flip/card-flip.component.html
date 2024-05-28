@@ -1,0 +1,36 @@
+<div class="container">
+    @if (isFlipAllImages()) {
+        <div class="wrapper-btn">
+            <button (click)="flipAllImages()" #FlipImageBtn>Flip images</button>
+        </div>
+    }
+    @if (isCompleted()) {
+        <div class="wrapper-btn">
+            <button (click)="initializeGame()">Play Again</button>
+        </div>
+        @switch (misClick()) {
+            @case (0) {
+                <h1 class="score Perfect">Perfect</h1>
+            }
+            @case (1) {
+                <h1 class="score Good">Good</h1>
+            }
+            @case (2) {
+                <h1 class="score Nice">Nice</h1>
+            }
+            @case (3) {
+                <h1 class="score Ok">Ok</h1>
+            }@default {
+                <h1 class="score Fail">Fail</h1>
+            }
+        }
+    } @else {
+        <div class="wrapper" [style.paddingTop]="isFlipAllImages() || isCompleted() ? '' : '71.188px'">
+            @for (item of cardObj; track $index) {
+            <app-card [url]="item.url" [isVisible]="item.isVisible" [index]="$index" [isMatch]="item.isMatch"
+                (flipSingleImageEmit)="isClickable() ? flipSingleImage($event) : pleaseStartGame()" />
+            }
+        </div>
+    }
+
+</div>

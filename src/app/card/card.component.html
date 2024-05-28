@@ -1,0 +1,12 @@
+<div class="flip-box" (click)="isVisible() ? '' : flipSingleImage()">
+    @if (!isMatch()) {
+    <div class="flip-box-inner" [style]="isVisible() ? 'transform: rotateY(180deg)' : 'transform: rotateY(0deg)'">
+        <div class="flip-box-front">
+            <img src="../../assets/placeholder.png" alt="placeholder">
+        </div>
+        <div class="flip-box-back">
+            <img [src]="url()" [alt]="url()">
+        </div>
+    </div>
+    }
+</div>
