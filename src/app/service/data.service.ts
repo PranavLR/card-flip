@@ -16,7 +16,7 @@ export class DataService {
     of(...new Array(6)).pipe(
       map(() => {
         const id = Math.floor(Math.random() * 1000);
-        return `https://source.unsplash.com/random/300x300?sig=${id}`;
+        return `https://picsum.photos/id/${id}/301/200`;
       }),
       mergeMap((url) => from([url, url])),
       toArray(),
